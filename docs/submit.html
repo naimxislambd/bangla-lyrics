@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>লিরিক্স জমা দিন — গানের কথা</title>
+<meta name="description" content="আপনার মৌলিক গানের লিরিক্স জমা দিন">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body><header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html">🎵 <span>গানের কথা</span></a>
+    <nav class="main-nav"><a href="index.html" class="">হোম</a><a href="az.html" class="">অ–হ</a><a href="categories.html" class="">বিভাগ</a><a href="submit.html" class="active">লিরিক্স জমা দিন</a><a href="copyright.html" class="">কপিরাইট</a></nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <h1 class="page-title">লিরিক্স জমা দিন</h1>
+  <div class="info-box">
+    <h3>✅ যা গ্রহণ করা হয়</h3>
+    <ul>
+      <li><strong>আপনার নিজের লেখা মৌলিক গানের লিরিক্স</strong> — কথা ও সুর আপনার নিজের।</li>
+      <li><strong>যাচাইকৃত পাবলিক-ডোমেইন লিরিক্স</strong> — যেমন লালন, হাসান রাজা, ঐতিহ্যবাহী লোকগীতি (রচয়িতার মৃত্যুর ৬০+ বছর পার হয়েছে)।</li>
+    </ul>
+    <h3>❌ যা গ্রহণ করা হয় না</h3>
+    <ul>
+      <li>কপিরাইটেড গানের লিরিক্স (অন্যের লেখা আধুনিক গান, ব্যান্ড/সিনেমার গান)।</li>
+      <li>অস্পষ্ট উৎসের লিরিক্স — রচয়িতা/অধিকার যাচাই না হলে প্রকাশ হয় না।</li>
+    </ul>
+    <p>নিচের ফর্মটি পূরণ করলে একটি ইমেইল ড্রাফট তৈরি হবে — লিরিক্স পাঠান, যাচাইয়ের পর প্রকাশ করা হবে।</p>
+  </div>
+  <form class="submit-form" onsubmit="return buildMail(event)">
+    <label>গানের শিরোনাম *<input id="fTitle" required placeholder="যেমন: শেষ আশ্রয়"></label>
+    <label>রচয়িতার নাম *<input id="fWriter" required placeholder="আপনার নাম"></label>
+    <label>শিল্পী / চ্যানেল<input id="fArtist" placeholder="যেমন: গানের ঢোল"></label>
+    <label>বিভাগ
+      <select id="fCat">
+        <option value="রক ব্যালাড">রক ব্যালাড</option>
+        <option value="অ্যাকোস্টিক">অ্যাকোস্টিক</option>
+        <option value="লোকগীতি">লোকগীতি</option>
+        <option value="পার্টি / EDM">পার্টি / EDM</option>
+      </select></label>
+    <label>অধিকারের ধরন *
+      <select id="fRights" required>
+        <option value="মৌলিক — আমার নিজের রচনা">মৌলিক — আমার নিজের রচনা</option>
+        <option value="পাবলিক ডোমেইন — রচয়িতার মৃত্যু ৬০+ বছর আগে">পাবলিক ডোমেইন — রচয়িতার মৃত্যু ৬০+ বছর আগে</option>
+      </select></label>
+    <label>লিরিক্স *<textarea id="fLyrics" required rows="12" placeholder="[Verse 1]&#10;আপনার লিরিক্স এখানে লিখুন…"></textarea></label>
+    <label class="check"><input type="checkbox" id="fConfirm" required> আমি নিশ্চিত করছি — এই লিরিক্স আমার নিজের মৌলিক রচনা, অথবা যাচাইকৃত পাবলিক-ডোমেইন।</label>
+    <button class="btn" type="submit">📧 ইমেইলে পাঠান</button>
+  </form>
+</main><footer class="site-footer">
+  <div class="wrap">
+    <p><strong>গানের কথা</strong> — বাংলা গানের লিরিক্স আর্কাইভ</p>
+    <p class="fine">এই সাইটে শুধু মৌলিক রচনা ও যাচাইকৃত পাবলিক-ডোমেইন লিরিক্স প্রকাশিত হয়।
+    কপিরাইট সংক্রান্ত অভিযোগ থাকলে <a href="copyright.html">কপিরাইট নীতি</a> দেখুন।</p>
+    <p class="fine">© 2026 গানের কথা</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

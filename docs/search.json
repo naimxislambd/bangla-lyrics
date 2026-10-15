@@ -1,0 +1,58 @@
+[
+ {
+  "slug": "ami-kothay-pabo-tare",
+  "title": "আমি কোথায় পাব তারে",
+  "transliteration": "Ami Kothay Pabo Tare",
+  "artist": "লোকগীতি (ঐতিহ্যবাহী)",
+  "category_bn": "লোকগীতি"
+ },
+ {
+  "slug": "khanchar-bhitor-ochin-pakhi",
+  "title": "খাঁচার ভিতর অচিন পাখি",
+  "transliteration": "Khanchar Bhitor Ochin Pakhi",
+  "artist": "লোকগীতি (ঐতিহ্যবাহী)",
+  "category_bn": "লোকগীতি"
+ },
+ {
+  "slug": "chokher-jol",
+  "title": "চোখের জল",
+  "transliteration": "Chokher Jol",
+  "artist": "গানের ঢোল",
+  "category_bn": "রক ব্যালাড"
+ },
+ {
+  "slug": "dhoom-dharakka",
+  "title": "ধুমধাড়াক্কা",
+  "transliteration": "Dhoom Dharakka",
+  "artist": "গানের ঢোল রিমিক্স",
+  "category_bn": "পার্টি / EDM"
+ },
+ {
+  "slug": "nodir-opekkha",
+  "title": "নদীর অপেক্ষা",
+  "transliteration": "Nodir Opekkha",
+  "artist": "গানের ঢোল আনপ্লাগড",
+  "category_bn": "অ্যাকোস্টিক"
+ },
+ {
+  "slug": "brishti-bheja-shohor",
+  "title": "বৃষ্টিভেজা শহর",
+  "transliteration": "Brishti Bheja Shohor",
+  "artist": "গানের ঢোল স্টুডিও",
+  "category_bn": "রক"
+ },
+ {
+  "slug": "shesh-ashroy",
+  "title": "শেষ আশ্রয়",
+  "transliteration": "Shesh Ashroy",
+  "artist": "গানের ঢোল",
+  "category_bn": "রক ব্যালাড"
+ },
+ {
+  "slug": "shob-loke-koy-lalon",
+  "title": "সব লোকে কয় লালন",
+  "transliteration": "Shob Loke Koy Lalon",
+  "artist": "লোকগীতি (ঐতিহ্যবাহী)",
+  "category_bn": "লোকগীতি"
+ }
+]
