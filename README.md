@@ -23,7 +23,20 @@ Only two kinds of lyrics are published here:
 Never publish copyrighted lyrics (modern bands, film songs, other artists' work).
 The submit page and copyright page enforce this for contributors too.
 
-## Add a new song
+## Admin panel (login + post from browser)
+
+- Open **https://naimxislambd.github.io/bangla-lyrics/admin/**
+- First time: create a fine-grained PAT at
+  `github.com/settings/tokens?type=beta` → repo **bangla-lyrics** →
+  **Contents: Read and write** → paste it on the admin login page
+  (token stays only in your browser)
+- Fill the form → **প্রকাশ করুন** → the song JSON is committed to
+  `data/songs/` via the GitHub API
+- A GitHub Actions workflow (`.github/workflows/build.yml`) auto-runs
+  `node build.js`, rebuilds `docs/`, and pushes — the site updates in ~1-2 min
+- You can also edit or delete published songs from the panel
+
+## Add a new song (manual)
 
 1. Copy a JSON from `data/songs/` as a template into `data/songs/your-slug.json`
 2. Fill in: title, transliteration, artist, writer, year, category, lyrics
