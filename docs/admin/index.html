@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>অ্যাডমিন — গানের কথা</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="../index.html">🎵 <span>গানের কথা</span></a>
+    <span class="badge badge-copy">অ্যাডমিন প্যানেল</span>
+  </div>
+</header>
+<main class="wrap narrow">
+  <div id="toast" class="toast"></div>
+
+  <div id="loginView" class="glass-panel" style="display:none">
+    <h2>🔐 অ্যাডমিন লগইন</h2>
+    <p class="muted">GitHub token দিয়ে লগইন করুন। Token শুধু আপনার এই ব্রাউজারে থাকে।</p>
+    <ol class="steps">
+      <li><a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener">এখানে ক্লিক করে</a> <strong>Generate new token</strong> চাপুন</li>
+      <li>Repository access-এ <strong>Only select repositories</strong> → <strong>bangla-lyrics</strong> সিলেক্ট করুন</li>
+      <li>Permissions-এ <strong>Contents</strong> → <strong>Read and write</strong> দিন</li>
+      <li>Generate করে token-টি কপি করে নিচে পেস্ট করুন</li>
+    </ol>
+    <label>GitHub Token<input id="pat" type="password" placeholder="github_pat_..." autocomplete="off"></label>
+    <button class="btn" onclick="doLogin()">লগইন →</button>
+  </div>
+
+  <div id="appView" style="display:none">
+    <div class="topbar">
+      <span id="whoami" class="muted"></span>
+      <button class="btn btn-ghost btn-sm" onclick="doLogout()">🚪 লগআউট</button>
+    </div>
+
+    <div class="glass-panel">
+      <h2 id="formTitle">➕ নতুন গান যোগ করুন</h2>
+      <div class="admin-grid">
+        <label class="full">গানের শিরোনাম *<input id="f_title" placeholder="যেমন: শেষ আশ্রয়"></label>
+        <label>Transliteration (ইংরেজিতে)<input id="f_trans" placeholder="যেমন: Shesh Ashroy"></label>
+        <label>Slug (auto)<input id="f_slug" placeholder="shesh-ashroy"></label>
+        <label>শিল্পী / চ্যানেল<input id="f_artist" placeholder="যেমন: গানের ঢোল"></label>
+        <label>রচয়িতা<input id="f_writer" placeholder="আপনার নাম"></label>
+        <label>বিভাগ<select id="f_cat">
+          <option value="rock-ballad">রক ব্যালাড</option>
+          <option value="acoustic">অ্যাকোস্টিক</option>
+          <option value="folk">লোকগীতি</option>
+          <option value="party">পার্টি / EDM</option>
+        </select></label>
+        <label>অধিকার<select id="f_rights">
+          <option value="original">মৌলিক — আমার নিজের রচনা</option>
+          <option value="public-domain">পাবলিক ডোমেইন</option>
+        </select></label>
+        <label>বছর<input id="f_year" placeholder="২০২৬"></label>
+        <label>কণ্ঠ<input id="f_vocal" placeholder="পুরুষ কণ্ঠ / নারী কণ্ঠ"></label>
+        <label>টেম্পো<input id="f_tempo" placeholder="৯৫ BPM"></label>
+        <label>মুড<input id="f_mood" placeholder="বিরহ, ভালোবাসা"></label>
+        <label class="full">ছোট বিবরণ<textarea id="f_desc" rows="2" placeholder="গান সম্পর্কে ১-২ লাইন"></textarea></label>
+        <label class="full">নির্ভুলতা নোট (ঐচ্ছিক)<input id="f_note" placeholder="যেমন: বহুপ্রচলিত সংস্করণ"></label>
+        <label class="full">লিরিক্স *<textarea id="f_lyrics" rows="14" placeholder="[Verse 1]&#10;আপনার লিরিক্স এখানে…"></textarea></label>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+        <button id="saveBtn" class="btn" onclick="saveSong()">💾 প্রকাশ করুন</button>
+        <button class="btn btn-ghost" onclick="resetForm()">↺ ফর্ম খালি করুন</button>
+      </div>
+      <p class="muted" style="margin-top:12px">⚖️ শুধু নিজের মৌলিক লিরিক্স বা যাচাইকৃত পাবলিক-ডোমেইন লিরিক্স পোস্ট করুন।</p>
+    </div>
+
+    <div class="glass-panel">
+      <h2>📋 প্রকাশিত গান</h2>
+      <div id="songList"><p class="muted">লোড হচ্ছে…</p></div>
+    </div>
+  </div>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>
